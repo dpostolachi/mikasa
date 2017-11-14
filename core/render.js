@@ -3,8 +3,7 @@ const { renderToString } = require('react-dom/server')
 const getStore = require('./store')
 const React = require('react')
 const router = require('koa-router')()
-
-import AppRouter from './router'
+const AppRouter = require('./router')
 
 module.exports = (app, opts) => {
 
