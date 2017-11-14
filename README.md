@@ -16,7 +16,7 @@ A simple wrapper for server side rendering isomorphic react. It uses Koa.js as w
 ## Routes
 Routes are based on routes from react-router, they must be specified as an array of objects that must contain the following attributes.
 
-| Parameters    | Type               | Cool  |
+| Parameters    | Type               | Description  |
 | ------------- |:------------------:| ----- |
 | path          | String             | The route path, for example: /about |
 | exact        | Boolean              | Exact parameter from react-router |
@@ -26,7 +26,7 @@ Routes are based on routes from react-router, they must be specified as an array
 ## Static
 The static object must contain the following attributes.
 
-| Parameters    | Type               | Cool  |
+| Parameters    | Type               | Description  |
 | ------------- |:------------------:| ----- |
 | path          | String             | The path that will be used in browser, for exmaple: /public |
 | local        | String              | The path to folder containing the static files. |
@@ -35,7 +35,7 @@ The static object must contain the following attributes.
 ## Store
 The store object is used to create the redux storage on the backend. It must contain the following attributes:
 
-| Parameters    | Type               | Cool  |
+| Parameters    | Type               | Description  |
 | ------------- |:------------------:| ----- |
 | reducer          | Function             | It can be a simple reducer or a combined reducer. |
 | initialState        | Object              | This will be used as initialState for the redux. |
@@ -71,7 +71,7 @@ mikasa({
 # Usage in browser
 For the the browser usage import mikasa/browser. The configuration object is similar to the server one and it must contain the following attributes:
 
-| Parameters    | Type               | Cool  |
+| Parameters    | Type               | Description  |
 | ------------- |:------------------:| ----- |
 | reducer          | Function        | It can be a simple reducer or a combined reducer. |
 | routes        | Array              | An Array of Route Objects. |
