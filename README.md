@@ -39,3 +39,56 @@ The store object is used to create the redux storage on the backend. It must con
 | ------------- |:------------------:| ----- |
 | reducer          | Function             | It can be a simple reducer or a combined reducer. |
 | initialState        | Object              | This will be used as initialState for the redux. |
+
+## Example
+```javascript
+
+import initialState from './store/default'
+import reducer from './reducers'
+import Layout from './components/layout'
+const mikasa = require('mikasa')
+
+mikasa({
+        port: 3002,
+        routes: routes,
+        static: {
+            path: '/public',
+            local: './static',
+            options: {
+                gzip: true,
+            }
+        },
+        layout: Layout,
+        store: {
+            initialState: initialState,
+            reducer: reducer,
+        },
+        promises: [],
+    })
+}
+
+```
+# Usage in browser
+For the the browser usage import mikasa/browser. The configuration object is similar to the server one and it must contain the following attributes:
+
+| Parameters    | Type               | Cool  |
+| ------------- |:------------------:| ----- |
+| reducer          | Function        | It can be a simple reducer or a combined reducer. |
+| routes        | Array              | An Array of Route Objects. |
+| layout        | React Component    | The React Component that will be used as layout. |
+
+# Example in browser
+
+```javascript
+import mikasa from 'mikasa/browser'
+import reducer from '/reducers'
+import routes from '/routes'
+import layout from '/components/layout'
+
+mikasa({
+    reducer: reducer,
+    routes: routes,
+    layout: layout,
+})
+```
+
