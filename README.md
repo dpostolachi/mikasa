@@ -1,5 +1,5 @@
 # mikasa
-A simple framework for server side rendering react.
+A simple wrapper for server side rendering react. It uses Koa.js as webserver, Redux and React-router for routing.
 
 ## Configuration
 
