@@ -1,9 +1,6 @@
-import { applyMiddleware, createStore } from 'redux'
-
-import ReduxThunk from 'redux-thunk'
-
-import Promise from 'redux-promise-middleware'
-
+const { applyMiddleware, createStore } = require('redux')
+const ReduxThunk = require('redux-thunk')
+const Promise = require('redux-promise-middleware')
 const middleware = applyMiddleware(Promise(), ReduxThunk)
 
 export default (config) => {
