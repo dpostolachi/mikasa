@@ -4,7 +4,6 @@ const router = require('koa-router')()
 const mount = require('koa-mount')
 const serveStatic = require('./core/static')
 
-
 module.exports = ((opts) => {
     const routes = [].concat.apply([], (opts.routes || []))
 

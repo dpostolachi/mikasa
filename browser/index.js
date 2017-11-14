@@ -12,7 +12,7 @@ import Promise from 'redux-promise-middleware'
 
 import { BrowserRouter } from 'react-router-dom'
 
-import AppRouter from '../core/router'
+import AppRouter from './router'
 
 const middleware = applyMiddleware(Promise(), ReduxThunk)
 
