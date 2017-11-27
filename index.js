@@ -23,7 +23,7 @@ module.exports = class Mikasa {
         // Test if its array
         if (Array.isArray(route)) {
             for (const _route of route) {
-                return this.addRoute(_route)
+                this.addRoute(_route)
             }
         } else {
             this.testRoute(route)
@@ -91,7 +91,7 @@ module.exports = class Mikasa {
     addStatic(statics) {
         if (Array.isArray(statics)) {
             for (const _static of statics) {
-                return this.addStatic(_static)
+                this.addStatic(_static)
             }
         } else {
             this.testStatic(statics)
@@ -121,7 +121,7 @@ module.exports = class Mikasa {
     addPromise(promise) {
         if (Array.isArray(promise)) {
             for (const _promise of promise)
-                return this.addPromise(_promise)
+                this.addPromise(_promise)
         } else
             this._promises.push(promise)
         return this
