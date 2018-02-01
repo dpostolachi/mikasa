@@ -23,7 +23,7 @@ export default (opts) => {
     delete window.__PRELOADED_STATE__
 
     const Store = createStore(opts.reducer, preloadedState, middleware)
-    
+
     hydrate(<BrowserRouter><AppRouter AppLayout={ opts.layout } routes={opts.routes} store={Store} /></BrowserRouter>, document);
 
 }
