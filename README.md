@@ -42,7 +42,7 @@ app.listen(PORT)
 ```
 
 ## Adding routes
-For routing react components user the 'addRoute' method it can accept an array or a route.
+For routing react components use the 'addRoute' method it can accept an array or a route.
 ```javascript
 app.addRoute([
    {
@@ -67,7 +67,7 @@ Routes are based on routes from react-router, they must be specified as an array
 | loadData        | Function    | A function used for doing asynchronus actions before the render of the component. It must return a promise or an array of promises. The function takes three parameters: The context parameter from koa that contains the request, the redux store object for the dispatches before the render and a shared object.  |
 
 ## Adding statics
-To add statics use 'addStatic' method. Just like the routes, you can pass an object or an array of objects.
+To add statics use the 'addStatic' method. Just like the routes, you can pass an object or an array of objects.
 ```javascript
 app.addStatic({
     path: '/public',
