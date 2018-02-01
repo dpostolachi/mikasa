@@ -1,5 +1,6 @@
-const serve = require('koa-static')
+import serve from 'koa-static'
 
-module.exports = (opts) => {
-    return serve(opts.path, opts.options || {})
+export default ( opts ) => {
+    const { path, options } = opts
+    return serve( path, options || {} )
 }

@@ -1,6 +1,7 @@
-const koa = require('koa')
-const mount = require('koa-mount')
-const serveStatic = require('./core/static')
+import koa from 'koa'
+import mount from 'koa-mount'
+import serveStatic from './core/static'
+import Render from './core/render'
 
 module.exports = class Mikasa {
     constructor() {
@@ -67,19 +68,19 @@ module.exports = class Mikasa {
 
     testRoute(route) {
         if (typeof route.path !== 'string')
-            throw `Route path must be a string, got ${typeof route}`
+            throw(`Route path must be a string, got ${typeof route}`)
         if (typeof route.component !== 'function')
-            throw `Route component must be a react component, got ${typeof route.component}`
+            throw(`Route component must be a react component, got ${typeof route.component}`)
         return
     }
 
     testStatic(staticObj) {
         if (typeof staticObj.path !== 'string')
-            throw `Static path must be a string, got ${typeof staticObj.path}`
+            throw(`Static path must be a string, got ${typeof staticObj.path}`)
         if (typeof staticObj.local !== 'string')
-            throw `Static local must be a string, got ${typeof staticObj.local}`
+            throw(`Static local must be a string, got ${typeof staticObj.local}`)
         if (typeof staticObj.options !== 'object')
-            throw `Static options must be an object, got ${typeof staticObj.options}`
+            throw(`Static options must be an object, got ${typeof staticObj.options}`)
         return
     }
 
@@ -102,16 +103,16 @@ module.exports = class Mikasa {
 
     setLayout(layout) {
         if (typeof layout !== 'function')
-            throw `Layout must be an React Component, got ${typeof layout}`
+            throw(`Layout must be an React Component, got ${typeof layout}`)
         this._layout = layout
         return this
     }
 
     setStore(store) {
         if (typeof store.initialState === 'undefined')
-            throw 'Store initialState must be an object or an aray, got undefined'
+            throw('Store initialState must be an object or an aray, got undefined')
         if (typeof store.reducer !== 'function')
-            throw `Store reducer must be an function, got ${store.reducer}`
+            throw(`Store reducer must be an function, got ${store.reducer}`)
 
         this._store = store
 
@@ -133,9 +134,9 @@ module.exports = class Mikasa {
         this._port = port || 3000
 
         if (this._layout == null)
-            throw 'No layout was specified'
+            throw('No layout was specified')
         if (this._store == null)
-            throw 'No store was specified'
+            throw('No store was specified')
 
         // Pushing Static
         this._statics.forEach((_static) => {
@@ -154,7 +155,7 @@ module.exports = class Mikasa {
         })
 
         // Pushing routes
-        require('./core/render')(this._app, {
+        Render(this._app, {
             routes: this._routes,
             store: this._store,
             promises: this._promises,
