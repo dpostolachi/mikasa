@@ -1,4 +1,4 @@
-# Documentation is outdate, will update it soon.
+# Documentation is outdated, will update it soon.
 
 ## Demo
 A simple demo of mikasa using iTunes Api: [Demo](https://mikasa-app.herokuapp.com)
