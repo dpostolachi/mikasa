@@ -1,3 +1,8 @@
+# Documentation is outdate, will update it soon.
+
+## Demo
+A simple demo of mikasa using iTunes Api: [Demo](https://mikasa-app.herokuapp.com)
+
 # mikasa
 A simple wrapper for server side rendering isomorphic react. It uses Koa.js as webserver, Redux and React-router for routing.
 
