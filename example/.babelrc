@@ -1,0 +1,42 @@
+{
+    "env": {
+        "server": {
+            "presets": [
+                "react",
+                "es2015"
+            ],
+            "plugins": [
+                "transform-object-rest-spread",
+                "transform-decorators-legacy",
+                "transform-regenerator",
+                [
+                    "module-resolver",
+                    {
+                        "root": [
+                            "./"
+                        ],
+                    }
+                ]
+            ]
+        },
+        "client": {
+            "presets": [
+                "react",
+                "es2015",
+            ],
+            "plugins": [
+                "transform-object-rest-spread",
+                "transform-decorators-legacy",
+                "transform-regenerator",
+                [
+                    "module-resolver",
+                    {
+                        "root": [
+                            "./"
+                        ],
+                    }
+                ]
+            ]
+        }
+    }
+}
